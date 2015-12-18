@@ -79,7 +79,7 @@ function roda_customize_register( $wp_customize ) {
         'blog_display',
         array(
             'sanitize_callback' => 'roda_sanitize_checkbox',
-        )       
+        )
     );
     $wp_customize->add_control(
         'blog_display',
@@ -89,7 +89,7 @@ function roda_customize_register( $wp_customize ) {
             'section' 	=> 'roda_about',
             'priority'  => 8,
         )
-    );        
+    );
   	//Photo
   	$wp_customize->add_setting(
   		'about_photo',
@@ -161,7 +161,7 @@ function roda_customize_register( $wp_customize ) {
             'sanitize_callback' => 'roda_sanitize_radio',
         )
     );
-     
+
     $wp_customize->add_control(
         'svg_type',
         array(
@@ -187,7 +187,7 @@ function roda_customize_register( $wp_customize ) {
         'slider_display',
         array(
             'sanitize_callback' => 'roda_sanitize_checkbox',
-        )       
+        )
     );
     $wp_customize->add_control(
         'slider_display',
@@ -260,7 +260,7 @@ function roda_customize_register( $wp_customize ) {
                'priority'       => 13,
             )
         )
-    );        
+    );
     //Image 4
     $wp_customize->add_setting(
         'slider_image_4',
@@ -318,7 +318,7 @@ function roda_customize_register( $wp_customize ) {
         array(
             'sanitize_callback' => 'absint',
             'default'           => '55',
-        )       
+        )
     );
     $wp_customize->add_control( 'exc_lenght', array(
         'type'        => 'number',
@@ -340,8 +340,8 @@ function roda_customize_register( $wp_customize ) {
         array(
             'sanitize_callback' => 'absint',
             'default'           => '1170',
-            'transport'         => 'postMessage'            
-        )       
+            'transport'         => 'postMessage'
+        )
     );
     $wp_customize->add_control( 'single_width', array(
         'type'        => 'number',
@@ -362,8 +362,8 @@ function roda_customize_register( $wp_customize ) {
         array(
             'sanitize_callback' => 'absint',
             'default'           => '1170',
-            'transport'         => 'postMessage'            
-        )       
+            'transport'         => 'postMessage'
+        )
     );
     $wp_customize->add_control( 'page_width', array(
         'type'        => 'number',
@@ -384,8 +384,8 @@ function roda_customize_register( $wp_customize ) {
         array(
             'sanitize_callback' => 'absint',
             'default'           => '1170',
-            'transport'         => 'postMessage'            
-        )       
+            'transport'         => 'postMessage'
+        )
     );
     $wp_customize->add_control( 'index_width', array(
         'type'        => 'number',
@@ -442,7 +442,7 @@ function roda_customize_register( $wp_customize ) {
                 'priority' => 13
             )
         )
-    );         
+    );
     //Site title
     $wp_customize->add_setting(
         'site_title_color',
@@ -526,7 +526,7 @@ function roda_customize_register( $wp_customize ) {
                 'priority' => 16
             )
         )
-    );    
+    );
     //Footer
     $wp_customize->add_setting(
         'footer_color',
@@ -547,7 +547,7 @@ function roda_customize_register( $wp_customize ) {
                 'priority' => 17
             )
         )
-    ); 
+    );
     //___Fonts___//
     $wp_customize->add_section(
         'roda_typography',
@@ -556,10 +556,10 @@ function roda_customize_register( $wp_customize ) {
             'priority' => 15,
         )
     );
-    $font_choices = 
+    $font_choices =
         array(
-            'Fira Sans:400,700,400italic,700italic' => 'Fira Sans',  
-            'Source Sans Pro:400,700,400italic,700italic' => 'Source Sans Pro',     
+            'Fira Sans:400,700,400italic,700italic' => 'Fira Sans',
+            'Source Sans Pro:400,700,400italic,700italic' => 'Source Sans Pro',
             'Droid Sans:400,700' => 'Droid Sans',
             'Lato:400,700,400italic,700italic' => 'Lato',
             'Arvo:400,700,400italic,700italic' => 'Arvo',
@@ -580,14 +580,14 @@ function roda_customize_register( $wp_customize ) {
             'Yanone Kaffeesatz:400,700' => 'Yanone Kaffeesatz',
             'Rokkitt:400' => 'Rokkitt',
         );
-    
+
     $wp_customize->add_setting(
         'roda_fonts',
         array(
             'sanitize_callback' => 'roda_sanitize_fonts',
         )
     );
-    
+
     $wp_customize->add_control(
         'roda_fonts',
         array(
@@ -631,8 +631,8 @@ function roda_sanitize_radio( $input ) {
 //Fonts
 function roda_sanitize_fonts( $input ) {
     $valid = array(
-            'Fira Sans:400,700,400italic,700italic' => 'Fira Sans',  
-            'Source Sans Pro:400,700,400italic,700italic' => 'Source Sans Pro',     
+            'Fira Sans:400,700,400italic,700italic' => 'Fira Sans',
+            'Source Sans Pro:400,700,400italic,700italic' => 'Source Sans Pro',
             'Droid Sans:400,700' => 'Droid Sans',
             'Lato:400,700,400italic,700italic' => 'Lato',
             'Arvo:400,700,400italic,700italic' => 'Arvo',
@@ -653,7 +653,7 @@ function roda_sanitize_fonts( $input ) {
             'Yanone Kaffeesatz:400,700' => 'Yanone Kaffeesatz',
             'Rokkitt:400' => 'Rokkitt',
     );
- 
+
     if ( array_key_exists( $input, $valid ) ) {
         return $input;
     } else {
@@ -667,3 +667,13 @@ function roda_customize_preview_js() {
 	wp_enqueue_script( 'roda_customizer', get_template_directory_uri() . '/js/customizer.js', array( 'customize-preview' ), '20130508', true );
 }
 add_action( 'customize_preview_init', 'roda_customize_preview_js' );
+
+function roda_registers() {
+	wp_enqueue_script( 'roda_customizer_script', get_template_directory_uri() . '/js/roda_customizer.js', array("jquery"), '20120206', true  );
+
+	wp_localize_script( 'roda_customizer_script', 'rodaCustomizerObject', array(
+		'github'				=> __('GitHub','roda'),
+		'review'				=> __('Leave a Review', 'roda')
+		) );
+}
+add_action( 'customize_controls_enqueue_scripts', 'roda_registers' );
