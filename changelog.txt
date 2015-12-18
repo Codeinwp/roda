@@ -1,0 +1,13 @@
+Changelog
+*********
+
+*********************************
+Roda 1.03 - 07 Dec 2014
+*********************************
+- added missing table styles
+
+*********************************
+Roda 1.02 - 06 Dec 2014
+*********************************
+- added changelog.txt
+- removed navigation.js file
