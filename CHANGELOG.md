@@ -1,4 +1,8 @@
 
+### 2.1.0 - 19/05/2017
+**Changes:** 
+- Update style.css
+
 ### 1.1.0 - 19/05/2017
 **Changes:** 
 - Update version
