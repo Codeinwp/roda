@@ -1,4 +1,8 @@
 
+### 2.1.1 - 19/05/2017
+**Changes:** 
+- Fixed theme check errors
+
 ### 2.1.0 - 19/05/2017
 **Changes:** 
 - Update style.css
