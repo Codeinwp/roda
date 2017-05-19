@@ -1,4 +1,8 @@
 
+### 1.1.0 - 19/05/2017
+**Changes:** 
+- Update version
+
 ### 1.0.9 - 19/05/2017
 **Changes:** 
 - Fixed issue with WP Product Review tgm recommendation
