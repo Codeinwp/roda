@@ -64,7 +64,7 @@
 
   <?php if ( has_nav_menu( 'social' ) ) : ?>
     <nav class="social-navigation clearfix">
-      <h2 class="social-title"><?php echo __('My social profile', 'athemes'); ?></h2>
+      <h2 class="social-title"><?php echo __('My social profile', 'roda'); ?></h2>
       <div class="social-close"><i class="fa fa-close"></i></div>
       <?php wp_nav_menu( array( 'theme_location' => 'social', 'link_before' => '<span class="screen-reader-text">', 'link_after' => '</span>', 'container_class' => 'container', 'menu_class' => 'menu clearfix', 'fallback_cb' => false ) ); ?>
     </nav>
