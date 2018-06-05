@@ -194,15 +194,10 @@ require_once get_template_directory() . '/class-tgm-plugin-activation.php';
  */
 function roda_register_required_plugins() {
 		$plugins = array(
-			array(
-				'name'      => 'WP Product Review',
-				'slug'      => 'wp-product-review',
-				'required'  => false,
-			),
 
 			array(
-				'name'      => 'Intergeo Maps - Google Maps Plugin',
-				'slug'      => 'intergeo-maps',
+				'name'      => 'Orbit Fox',
+				'slug'      => 'themeisle-companion',
 				'required'  => false
 			),
 
